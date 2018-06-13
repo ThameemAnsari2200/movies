@@ -1,0 +1,7 @@
+com\movies\springboot\services\MovieService.class
+com\movies\springboot\controllers\MovieController.class
+com\movies\springboot\util\Util.class
+com\movies\springboot\services\MovieServiceImpl.class
+com\movies\springboot\domain\Movies.class
+com\movies\springboot\SpringBootWebApplication.class
+com\movies\springboot\util\Util$1.class

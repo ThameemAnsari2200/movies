@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <title>Spring Framework Guru</title>
+
+    <!--/*/ <th:block th:include="fragments/headerinc :: head"></th:block> /*/-->
+</head>
+<body>
+<div class="container">
+    <!--/*/ <th:block th:include="fragments/header :: header"></th:block> /*/-->
+    <div th:if="${not #lists.isEmpty(movies)}">
+        <h2>Movie List</h2>
+        <table class="table table-striped">
+            <tr>
+              <!--   <th>Id</th> -->
+                <th>Title</th>
+                <th>Director</th>
+                <th>ReleaseDate</th>
+                <th>Type</th>
+               <!--  <th>View</th> -->
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            <tr th:each="movie,itrStat : ${movies}">
+               <!--  <td th:text="${product.id}"><a href="/product/${product.id}">Id</a></td> -->
+                <td th:text="${movie.title}">Title</td>
+                <td th:text="${movie.director}">Director</td>
+                <td th:text="${movie.releaseDate}">ReleaseDate</td>
+                <td th:text="${movie.type}">Type</td>
+        <!--         <td><a th:href="${'/movie/' + movie.title}">View</a></td> -->
+                <td><a th:href="${'/movie/edit/' + itrStat.index}">Edit</a></td>
+                <td><a th:href="${'/movie/delete/'+ itrStat.index}">Delete</a></td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+</body>
+</html>
