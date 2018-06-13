@@ -1,4 +1,5 @@
-#Spring Boot Web Application
+# Spring Boot Web Application
+
 This repository has the project files for a movie assessment using JSON file
 
 In this part, I would like to demonstrate how to setup a Spring MVC controller to support CRUD operations, and Thymeleaf templates for the web application.
